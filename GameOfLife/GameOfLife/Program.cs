@@ -44,11 +44,11 @@ namespace GameOfLife
                 {
                     if (grid[i, j] == true)
                     {
-                        Console.Write("1");
+                        Console.Write("X");
                     }
                     else
                     {
-                        Console.Write("0");
+                        Console.Write(" ");
                     }
                 }
             }
@@ -122,7 +122,7 @@ namespace GameOfLife
 
                     if (LiveNeighbors > 2 || LiveNeighbors < 3)
                     {
-                        result[x, y] = false;
+                        //result[x, y] = false;
                     }
                     if (LiveNeighbors == 3)
                     { result[x, y] = true; }
@@ -158,7 +158,7 @@ namespace GameOfLife
 
                 grid = EvaluateGrid(grid);
                 DrawGrid(grid);
-                System.Threading.Thread.Sleep(175);
+                System.Threading.Thread.Sleep(105);
 
             }
         }

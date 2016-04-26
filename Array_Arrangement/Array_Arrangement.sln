@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin1", "Xamarin1\Xamarin1.csproj", "{77BAE007-4473-4BE9-9455-29BE736FF107}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array_Arrangement", "Array_Arrangement\Array_Arrangement.csproj", "{83AA8AAE-ED89-4A47-B9C8-4304B6343079}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{77BAE007-4473-4BE9-9455-29BE736FF107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{77BAE007-4473-4BE9-9455-29BE736FF107}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{77BAE007-4473-4BE9-9455-29BE736FF107}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{77BAE007-4473-4BE9-9455-29BE736FF107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83AA8AAE-ED89-4A47-B9C8-4304B6343079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83AA8AAE-ED89-4A47-B9C8-4304B6343079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83AA8AAE-ED89-4A47-B9C8-4304B6343079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83AA8AAE-ED89-4A47-B9C8-4304B6343079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
