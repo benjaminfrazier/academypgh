@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,44 +9,49 @@ namespace Revised_Battleship
 {
     class Program
     {
-        static void CheckShipLoc()
+        static void CheckShipLoc(int x, int y)
         {
-            string[,] strShipLoc;
+            string line;
+            string text = File.ReadAllText("../../ShipLocation.txt");
+            int i = 0;
 
-            strShipLoc = new string[8, 8];
+            //Console.WriteLine(text);
+            //Console.ReadLine();
 
-            //C - Cruiser 2 Squares
-            strShipLoc[0, 0] = "*";
-            strShipLoc[0, 1] = "*";
 
-            //D - Destroyer Three Squares
-            strShipLoc[4, 0] = "*";
-            strShipLoc[5, 0] = "*";
-            strShipLoc[6, 0] = "*";
+            char[] aCharArray;
 
-            //S - Sub Three Squares
-            strShipLoc[7, 1] = "*";
-            strShipLoc[7, 2] = "*";
-            strShipLoc[7, 3] = "*";
+            System.IO.StreamReader file = new System.IO.StreamReader("../../ShipLocation.txt");
 
-            //C - Battleship Four Squares
-            strShipLoc[2, 4] = "*";
-            strShipLoc[3, 4] = "*";
-            strShipLoc[4, 4] = "*";
-            strShipLoc[5, 4] = "*";
+            while ((line = file.ReadLine()) != null)
+            {
+                aCharArray = line.ToCharArray();
 
-            //A - Aircraft Carrier - Five Squares
-            strShipLoc[3, 6] = "*";
-            strShipLoc[4, 6] = "*";
-            strShipLoc[5, 6] = "*";
-            strShipLoc[6, 6] = "*";
-            strShipLoc[7, 6] = "*";
+                if (i == y)
+                {
+                    if (Convert.ToString(aCharArray[x]) == "X")
+                    {
+                        Console.WriteLine("It is a hit!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("It is a miss.");
+                    }
+                }
+
+                i++;
+            }
+
+            Console.ReadLine();
+
         }
         static void BuildGrid()
         {
             string[,] strGrid;
 
             strGrid = new string[8, 8];
+
+
         }
         static void Main(string[] args)
         {
@@ -72,11 +78,114 @@ namespace Revised_Battleship
 
             // If user picks a cell next to a ship, say "close!"
 
+            bool keeplooping;
+            int x = 0;
+            int y = 0;
+            int z = 0;
+            string line = "";
+            string[,] strShip;
+            string response;
+
+            strShip = new string[8, 8];
+
             //Build Battleship Grid
 
+            Console.Clear();
+            Console.WriteLine("Welcome to Battleship!");
+            Console.WriteLine("\n");
 
-            //Check ship loaction mapping
-            CheckShipLoc();
+            x = 0;
+            y = 0;
+
+            Console.Write("     X     0     1     2     3     4     5     6     7" + "\n");
+            Console.Write("\n");
+            Console.Write("Y\n");
+            Console.Write("\n");
+
+            z = 0;
+
+            while (y <= 7)
+            {
+                while (x <= 7)
+                {
+                    if (strShip[x, y] == null)
+                    {
+                        line = line + "      ";
+                        x = x + 1;
+                    }
+                    else
+                    {
+                        line = line + "     " + strShip[y, x];
+                        x = x + 1;
+                    }
+
+                }
+                Console.Write(z + "     " + line + "\n");
+                Console.Write("\n");
+                line = "";
+                y = y + 1;
+                x = 0;
+                z = z + 1;
+            }
+
+            Console.Write("\n");
+
+            MissingXCoord:
+            Console.WriteLine("Please enter x coordinate to attack ship!");
+            response = Console.ReadLine();
+
+            keeplooping = true;
+
+            while (keeplooping)
+            {
+                if (int.TryParse(response, out x))
+                {
+                    if (x >=8)
+                    {
+                        Console.WriteLine("A number between 0 and 8 must be entered.");
+                    }
+                    else
+                    {
+                        keeplooping = false;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("A valid number was not entered.");
+                    goto MissingXCoord;
+                }
+            }
+
+            MissingYCoord:
+            Console.WriteLine("Please enter y coordinate to attack ship!");
+            response = Console.ReadLine();
+
+            keeplooping = true;
+
+            while (keeplooping)
+            {
+                if (int.TryParse(response, out y))
+                {
+                    if (y >= 8)
+                    {
+                        Console.WriteLine("A number between 0 and 8 must be entered.");
+                    }
+                    else
+                    {
+                        keeplooping = false;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("A valid number was not entered.");
+                    goto MissingYCoord;
+                }
+            }
+
+            //Check ship location mapping
+            CheckShipLoc(x, y);
+
+
             
         }
     }
