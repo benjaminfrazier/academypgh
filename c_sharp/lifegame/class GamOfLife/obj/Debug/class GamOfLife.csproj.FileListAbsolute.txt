@@ -1,0 +1,14 @@
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\bin\Debug\class GamOfLife.exe.config
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\bin\Debug\readme.txt
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\bin\Debug\class GamOfLife.exe
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\bin\Debug\class GamOfLife.pdb
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\obj\Debug\class GamOfLife.csprojResolveAssemblyReference.cache
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\obj\Debug\class GamOfLife.exe
+C:\Users\slstr\Documents\github\academypgh\lifegame\class GamOfLife\obj\Debug\class GamOfLife.pdb
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\bin\Debug\class GamOfLife.exe.config
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\obj\Debug\class GamOfLife.exe
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\obj\Debug\class GamOfLife.pdb
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\bin\Debug\readme.txt
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\bin\Debug\class GamOfLife.exe
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\bin\Debug\class GamOfLife.pdb
+C:\Users\slstr\Documents\github\academypgh\c\lifegame\class GamOfLife\obj\Debug\class GamOfLife.csprojResolveAssemblyReference.cache
